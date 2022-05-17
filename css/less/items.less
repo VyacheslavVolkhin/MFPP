@@ -1,44 +1,227 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
-.item-photo {
+.item-tile-step {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 25px 20px 16px 30px;
+    background-color: #fff;
+    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    .tile-step-title {
+        display: block;
+        padding: 0 0 0 12px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 24/20;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: rgba(159, 159, 159, 0.35);
+    }
+    .tile-title-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .tile-desc-wrap {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+        flex: 1;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .tile-title {
+        display: block;
+        font-size: 16px;
+        line-height: 22/16;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+    }
+    .tile-info-wrap {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: bold;
+        color: var(--clr-att);
+        width: 100%;
+        flex-shrink: 0;
+    }
+    .elm-ico {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+}
+.item-tile-order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px 20px 20px;
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    transition: all ease 0.2s;
+    font-size: 12px;
+    line-height: 14/12;
+    position: relative;
+    .elm-tooltip {
+        position: absolute;
+        z-index: 2;
+        top: 13px;
+        right: 13px;
+    }
+    .tile-title {
+        display: block;
+        font-size: 18px;
+        line-height: 18/14;
+        font-weight: bold;
+        margin: 0 0 14px 0;
+        padding-right: 25px;
+    }
+    .tile-row {
+        margin-bottom: 15px;
+    }
+    .row-value-center {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        .row-value {
+            flex: 1;
+        }
+    }
+    .row-value-title {
+        display: block;
+        font-size: 10/8em;
+        margin: 0 10px 0 0;
+        max-width: 60/8em;
+        line-height: 16/12;
+        color: #2F385C;
+    }
+    .row-title {
+        display: block;
+        font-size: 1em;
+        margin: 0;
+        font-weight: 400;
+    }
+    .row-value {
+        display: block;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #2F385C;
+        font-weight: bold;
+        span, b {
+            font-size: 35px;
+            display: inline;
+        }
+    }
+    .tile-action {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .btn {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+    }
+}
+.item-tile-total {
+    font-size: 14px;
+    line-height: 24/14;
+    font-weight: 500;
+    .tile-title {
+        display: block;
+        font-size: 30px;
+        line-height: 40/30;
+        font-weight: bold;
+        margin: 0 0 0.3em 0;
+    }
+}
+.elm-photo {
     display: block;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     line-height: 1;
+    &.photo-main {
+        border: 1px solid #f00;
+        width: 300px;
+        height: 300px;
+    }
     &:before {
         content: "";
-        display: block;
+        display: none;
         padding-top: 100%;
     }
     img {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
     }
-    &.photo-full {
+    &.photo-cover {
         &:before {
-            display: none;
+            display: block;
         }
         img {
-            position: relative;
-            top: auto;
-            bottom: auto;
-            left: auto;
-            right: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+    &.photo-contain {
+        &:before {
+            display: block;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
     }
 }
-.elm-ico, .button-ico, .menu-ico, .frm-ico {
+@supports (object-fit: cover) {
+    .elm-photo {
+        &.photo-cover {
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@supports (object-fit: contain) {
+    .elm-photo {
+        &.photo-contain {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                max-width: inherit;
+                max-height: inherit;
+                right: auto;
+                bottom: auto;
+            }
+        }
+    }
+}
+.elm-ico, .button-ico, .menu-ico, .frm-ico, .tab-ico {
     display: block;
     position: relative;
     overflow: hidden;
     width: 40px;
     height: 40px;
-    img, .i, svg {
+    img, [class*="icon-"], .i, svg {
         display: block;
         position: absolute;
         top: 0;
@@ -48,5 +231,140 @@
         margin: auto;
         max-width: 100%;
         max-height: 100%;
+    }
+}
+.elm-overlay {
+    display: none;
+    animation: fadein ease 0.2s;
+    background: fade(#000, 80);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 120;
+    &.active {
+        display: block;
+    }
+}
+.elm-tooltip {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url(../img/icons/info.svg) center no-repeat;
+        background-size: 20px auto;
+    }
+}
+@media (min-width: 768px) {
+    .item-tile-step {
+        padding-bottom: 30px;
+        padding-right: 50px;
+    }
+    .item-tile-order {
+        .tile-title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .tile-row {
+            margin-bottom: 9px;
+        }
+        .tile-action {
+            padding-top: 5px;
+        }
+        .btn {
+            height: 34px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .item-tile-step {
+        padding-right: 40px;
+        .tile-step-title {
+            padding-left: 24px;
+            font-size: 20px;
+        }
+        .tile-title {
+            font-size: 18px;
+            line-height: 24/18;
+            margin-bottom: 15px;
+        }
+    }
+    .item-tile-order {
+        padding-left: 22px;
+        padding-right: 22px;
+        font-size: 14px;
+        .tile-title {
+            margin-bottom: 20px;
+        }
+        .tile-action {
+            padding-top: 10px;
+        }
+        .row-value {
+            font-size: 25px;
+            span {
+                font-size: 40px;
+            }
+        }
+        .btn {
+            height: 37px;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .item-tile-step {
+        padding-right: 64px;
+        .tile-title {
+            font-size: 18px;
+            line-height: 22/18;
+            br {
+                display: none;
+            }
+        }
+    }
+    .item-tile-order {
+        padding: 25px 30px 30px 30px;
+        .tile-title {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 35px;
+        }
+        .row-title {
+            font-size: 16px;
+        }
+        .row-value {
+            font-size: 25px;
+            span {
+                font-size: 50px;
+            }
+        }
+        .tile-row {
+            margin-bottom: 20px;
+        }
+        .tile-action {
+            padding-top: 20px;
+        }
+        .btn {
+            height: 50px;
+        }
+    }
+    .item-tile-total {
+        font-size: 16px;
+        line-height: 1.5;
+        .tile-title {
+            font-size: 45px;
+            line-height: 61/45;
+            margin-bottom: 2px;
+        }
     }
 }
