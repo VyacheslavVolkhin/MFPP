@@ -1,7 +1,7 @@
 :root {
 	--clr-base: #000000;
 	--clr-att: #61C0C5;
-	--clr-att-hover: #91C0C5;
+	--clr-att-hover: #39AFB6;
 	--clr-light: #e4e4e;
 
 	--min: 375px;
@@ -43,6 +43,50 @@ li {
         margin-bottom: 0;
     }
 }
+.list-check {
+    li {
+        line-height: 30/16;
+        padding-left: 45/16em;
+        &:before {
+            content: "";
+            width: 28/16em;
+            height: 28/16em;
+            position: absolute;
+            top: 15/16em;
+            left: 0;
+            margin: -14/16em 0 0 0;
+            background: url(../img/icons/check.svg) center no-repeat;
+            background-size: 100% auto;
+            border-radius: 0;
+        }
+    }
+}
+.list-marker {
+    li {
+        margin-bottom: 15px;
+        padding-left: 18px;
+
+        &:after, &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid #5CB9BE;
+            top: 11/14em;
+            left: 0;
+            margin-top: -4px;
+        }
+        &:after {
+            width: 4px;
+            height: 4px;
+            margin-top: -2px;
+            left: 2px;
+            background-color: #5CB9BE;
+        }
+    }
+}
 a {
 	text-decoration: none;
 	color: var(--clr-att);
@@ -61,6 +105,7 @@ a.link-main, .link-main {
 .link-phone {
     white-space: nowrap;
 }
+.page-subtitle,
 .page-title,
 h1, .h1-title,
 h2, .h2-title,
@@ -76,6 +121,14 @@ h6, .h6-title {
         margin-top: 0;
     }
 }
+.h1-title, h1 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+.h2-title, h2 {
+    font-size: 18px;
+    line-height: 1.2;
+}
 .text-att, .title-att {
     color: var(--clr-att);
 }
@@ -84,6 +137,85 @@ h6, .h6-title {
 }
 .text-center, .title-center {
     text-align: center;
+}
+.tbl-main-wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #DBDBDB;
+    table.tbl-main {
+        margin: 0;
+        thead {
+            tr {
+                &:last-child {
+                    th, td {
+                        border-bottom: 1px solid #EBEBEB;
+                    }
+                }
+            }
+        }
+        tr {
+            transition: background ease 0.2s;
+            &:hover {
+                background-color: #F9FFFF;
+                th, td {
+                    background-color: #F9FFFF;
+                }
+            }
+            &:first-child {
+                th, td {
+                    border-top: none;
+                }
+            }
+            &:last-child {
+                th, td {
+                    border-bottom: none;
+                }
+            }
+            th, td {
+                transition: background ease 0.2s;
+            }
+        }
+        th, td {
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
+table {
+    width: 100%;
+    font-size: 11px;
+    line-height: 15/11;
+    margin-bottom: 30px;
+    thead {
+        th, td {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24/14;
+        }
+    }
+    th, td {
+        border: 1px solid #EBEBEB;
+        padding: 9px;
+        font-weight: 400;
+        vertical-align: top;
+        text-align: left;
+        &:first-child {
+            background-color: #fafafa;
+        }
+    }
+    p, ul, li {
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 @media (max-width: 1399px) {
     :root {
@@ -104,15 +236,114 @@ h6, .h6-title {
     :root {
         font-size: 7px;
     }
+    .tbl-attention-wrap {
+        background-color: #F9FFFF;
+        margin: 0 -20px 20px -20px;
+        padding: 0 20px;
+        width: auto;
+    }
+    table {
+        &.tbl-attention {
+            font-size: 1em;
+            line-height: inherit;
+            display: block;
+            position: relative;
+            thead {
+            	display: none;
+            }
+            tbody,
+            tr,
+            td,
+            th {
+            	display: block;
+            	width: 100%;
+            	min-width: 100%;
+            	max-width: 100%;
+            	width: 100%\9;
+            	float: left\9;
+            	position: relative;
+            	overflow: hidden;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+            }
+            th, td {
+                &:last-child {
+                    border-bottom: 1px solid #E2E2E2;
+                    padding: 10px 0 15px 0;
+                    font-weight: bold;
+                }
+                &:first-child {
+                    padding-top: 15px;
+                }
+            }
+            tr {
+                &:last-child {
+                    th, td {
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (min-width: 768px) {
+    .h1-title, h1 {
+        font-size: 30px;
+    }
+    .h2-title, h2 {
+        font-size: 24px;
+    }
     p, ul, ol, table, blockquote, .bq-text, li {
         margin-bottom: 22/14em;
+    }
+    table {
+        &.tbl-attention {
+            font-size: 1em;
+            line-height: inherit;
+            tr {
+                &:last-child {
+                    th, td {
+                        border-bottom: none;
+                    }
+                }
+            }
+            thead {
+                th, td {
+                    font-size: 1em;
+                    line-height: inherit;
+                }
+            }
+            th, td {
+                border: none;
+                border-bottom: 1px solid #EBEBEB;
+                background-color: #fff;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+                &:last-child {
+                    background-color: #F9FFFF;
+                }
+            }
+        }
     }
 }
 @media (min-width: 992px) {
     :root {
         --paddingContainer: 24px;
+    }
+}
+@media (min-width: 1200px) {
+    .h1-title, h1 {
+        font-size: 40px;
+    }
+    .h2-title, h2 {
+        font-size: 30px;
     }
 }
 @media (min-width: 1400px) {

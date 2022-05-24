@@ -2,16 +2,25 @@
 			forms elements styles
 \* ----------------------------------- */
 .form-input {
-
+    border: 1px solid #9A9A9A;
+    border-radius: 16px;
+    padding: 0 10px 0 21px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #000;
+    height: 57px;
 }
 textarea.form-input {
-
+    height: 200px;
+    padding-top: 10px;
 }
 select.form-input {
     display: block;
     width: 100%;
     padding-right: 30px;
     background-image: url(../img/icons/arrow-select.svg);
+    background-size: 14px auto;
     background-position: right 20px center;
     background-color: #fff;
     background-repeat: no-repeat;
@@ -63,6 +72,12 @@ select::-ms-expand {
             color: var(--clr-att);
             background-color: transparent;
             border: none;
+        }
+        &.button-light {
+            color: #fff;
+            .button-ico {
+                filter: brightness(0) invert(1);
+            }
         }
     }
     
@@ -176,15 +191,50 @@ select::-ms-expand {
             .t-rotate(-45deg);
         }
     }
+    &.ico-nav-main {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
+        &:before {
+            background-image: url(../img/icons/arrow-nav-main.svg);
+            background-size: auto 30px;
+        }
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+        }
+    }
+    &.ico-nav {
+        width: 44px;
+        height: 40px;
+        flex-shrink: 0;
+        border: 1px solid #EBEBEB;
+        border-radius: 16px;
+        &:before {
+            background-image: url(../img/icons/arrow-nav.svg);
+            background-size: auto 14px;
+        }
+        &:hover {
+            background-color: #F3F3F3;
+            border-color: #F3F3F3;
+        }
+    }
+    &.ico-nav-prev {
+        &:before {
+            .t-rotate(180deg);
+        }
+    }
     &.ico-arrow {
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background-color: fade(#fff, 50);
+        background-color: fade(#fff, 35);
         z-index: 20;
         cursor: pointer;
         &:hover {
-            background-color: fade(#fff, 60);
+            background-color: fade(#fff, 50);
         }
         &:before {
             background-image: url(../img/icons/arrow-slider.svg);
@@ -197,7 +247,7 @@ select::-ms-expand {
         height: 34px;
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
         &:hover {
-            background-color: #fff;
+            background-color: #F0F0F0;
             box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
         }
         &:before {
@@ -209,6 +259,9 @@ select::-ms-expand {
         &:before {
             .t-rotate(180deg);
         }
+    }
+    &.button-disabled {
+        pointer-events: none;
     }
 }
 .btn-action-more {
@@ -299,6 +352,145 @@ select::-ms-expand {
         display: none;
     }
 }
+body {
+    .ui-tooltip {
+        width: auto;
+        border-radius: 8px;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff;
+        font-weight: 500;
+        background: fade(#000, 90);
+    }
+    .ui-selectmenu-button {
+        display: flex;
+        width: 100% !important;
+        align-items: center;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #9A9A9A;
+        border-radius: 16px;
+        padding: 0 10px 0 21px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #000;
+        height: 57px;
+        padding-right: 30px;
+        background: none;
+        &:before {
+            content: "";
+            display: block;
+            background-image: url(../img/icons/arrow-select.svg);
+            background-repeat: no-repeat;
+            background-size: 14px auto;
+            background-position: right center;
+            width: 14px;
+            height: 20px;
+            transition: transform ease 0.2s;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: -10px;
+        }
+        &.ui-selectmenu-button-open:before {
+            .t-rotate(180deg);
+        }
+        .ui-selectmenu-text {
+            font-size: 1em;
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &.ui-selectmenu-button-open {
+            border-color: var(--clr-att);
+        }
+    }
+    .ui-selectmenu-menu {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: var(--clr-base);
+        z-index: 1100;
+        border: none;
+        background-color: transparent;
+        ul {
+            background: #FFFFFF;
+            border: 1px solid #61C0C5;
+            border-radius: 16px;
+            padding: 15px 0 15px 0;
+            overflow: auto;
+            max-height: 300px;
+            width: calc(100% - 10px);
+            &::-webkit-scrollbar {
+                height: 12px;
+                width: 12px;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-track {
+                margin: 15px;
+            }
+            &::-webkit-scrollbar-thumb:vertical {
+                background-color: transparent;
+                border-left: 5px solid #E3E3E3;
+            }
+            &::-webkit-scrollbar-thumb:vertical:hover {
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-button:vertical:start:decrement {
+                background-color: transparent;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-button:vertical:end:increment {
+                background-color: transparent;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-button:horizontal:start:decrement {
+                background-color: transparent;
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-button:horizontal:end:increment {
+                background-color: transparent;
+                width: 0;
+                height: 0;
+            }
+        }
+        li.ui-menu-item {
+            margin: 0 0 10px 0;
+            padding: 0;
+            &:before {
+                display: none;
+            }
+            div {
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                padding: 8px 20px 8px 20px;
+                transition: all ease 0.2s;
+                font-size: 1em;
+                line-height: inherit;
+                margin: 0;
+                &:hover {
+                    background: #F9F9F9;
+                    color: var(--clr-att);
+                }
+                &.ui-state-active {
+                    color: var(--clr-att);
+                    padding: 8px 20px 8px 20px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 767px) {
     .btn-action-ico {
         &.ico-menu {
@@ -316,6 +508,15 @@ select::-ms-expand {
     }
 }
 @media (min-width: 768px) {
+    body {
+        .ui-selectmenu-button {
+            font-size: 16px;
+        }
+    }
+    .form-input {
+        font-size: 16px;
+        line-height: 22px;
+    }
     .frm-main-search {
         .form-input {
             height: 53px;

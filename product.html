@@ -14,16 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.structure.min.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
 </head>
 
 <body>
     <!-- wrap -->
-    <div class="wrap">
+    <div class="wrap wrap-inner">
 
         <!--main-header-wrap-->
         <div class="main-header-wrap cnt-section">
+            <img src="./img/inner.jpg" alt="" class="img-bg-cover">
             <div class="header-bg"></div>
 
             <!-- header -->
@@ -112,16 +114,585 @@
                 <!--/breadcrumbs-box-->
                 <!--title-box-->
                 <div class="title-box">
-                    <h1 class="page-title">Документы</h1>
+                    <h1 class="page-title">Промышленность</h1>
                 </div>
                 <!--/title-box-->
+                <!--title-items-wrap-->
+                <div class="title-items-box">
+                    <div class="items-wrap">
+                        <div class="item-wrap">
+                            <div class="item-tile-value">
+                                <div class="tile-item-value">до <span>17,5%</span></div>
+                                <div class="tile-item-title">Процентная ставка</div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item-tile-value">
+                                <div class="tile-item-value">до <span>5</span> лет</div>
+                                <div class="tile-item-title">Срок займа</div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item-tile-value">
+                                <div class="tile-item-value">от <span>10</span> до <span>300</span> млн ₽</div>
+                                <div class="tile-item-title">Сумма займа</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/title-items-wrap-->
             </div>
         </div>
         <!--/main-header-wrap-->
 
         <!-- page -->
         <div class="page_full">
-            333
+
+            <!--content-outer-wrap-->
+            <div class="content-outer-wrap">
+
+                <!--content-wrap-->
+                <div class="content-wrap">
+
+                    <div id="side-start"></div>
+
+                    <!--info-box-->
+                    <div class="info-box">
+                        <div class="items-wrap">
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section01">
+                                    <div class="tile-title js-btn-toggle">Заявка - анкета заемщика</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <p>Поручителя/Залогодателя (все листы заверяются подписями, печатью и в эл. виде)</p>
+                                        <div class="documents-list-wrap">
+                                            <div class="doc-wrap">
+                                                <a href="" class="elm-tile-doc">
+                                                    <span class="elm-ico tile-doc-ico">
+                                                        <img src="./img/icons/file.svg" alt="">
+                                                    </span>
+                                                    <span class="tile-doc-title">Скачать анкету</span>
+                                                    <span class="tile-doc-info">2.4 MB</span>
+                                                </a>
+                                            </div>
+                                            <div class="doc-wrap">
+                                                <a href="" class="elm-tile-doc">
+                                                    <span class="elm-ico tile-doc-ico">
+                                                        <img src="./img/icons/file.svg" alt="">
+                                                    </span>
+                                                    <span class="tile-doc-title">Пример заполнения анкеты</span>
+                                                    <span class="tile-doc-info">2.4 MB</span>
+                                                </a>
+                                            </div>
+                                            <div class="doc-wrap">
+                                                <a href="" class="elm-tile-doc">
+                                                    <span class="elm-ico tile-doc-ico">
+                                                        <img src="./img/icons/file.svg" alt="">
+                                                    </span>
+                                                    <span class="tile-doc-title">Весь пакет документов</span>
+                                                    <span class="tile-doc-info">2.4 MB</span>
+                                                </a>
+                                            </div>
+                                            <div class="doc-wrap">
+                                                <a href="" class="elm-tile-doc">
+                                                    <span class="elm-ico tile-doc-ico">
+                                                        <img src="./img/icons/file.svg" alt="">
+                                                    </span>
+                                                    <span class="tile-doc-title">Все требования к заемщику</span>
+                                                    <span class="tile-doc-info">2.4 MB</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section02">
+                                    <div class="tile-title js-btn-toggle">Условия кредитования</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <div class="tbl-attention-wrap">
+                                            <table class="tbl-attention">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Процентная ставка</th>
+                                                        <td class="td-att">
+                                                            <div class="elm-marker">КЛЮЧЕВАЯ СТАВКА БАНКА РОССИИ за вычетом 3% (1,5%)*</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Срок займа</th>
+                                                        <td class="td-att">
+                                                            <div class="elm-marker">до 5 лет</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Сумма займа</th>
+                                                        <td class="td-att">
+                                                            <div class="elm-marker">от 10 млн ₽ до 300 млн ₽</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Отсрочка погашения основного долга</th>
+                                                        <td class="td-att">
+                                                            <div class="elm-marker">до 12 месяцев</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Софинансирование</th>
+                                                        <td class="td-att">
+                                                            <div class="elm-marker">не менее 30% от проекта за счет собственных и заемных средств</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="text-medium">
+                                            <p><span class="elm-req">*</span> (процентная ставка не может быть ниже 2% годовых)</p>
+                                            <p>При предоставлении 1 или 2 вида обеспечения, годовая ставка устанавливается в размере ключевой ставки БР за вычетом 1,5%</p>
+                                            <p>При предоставлении 3 вида обеспечения, годовая ставка устанавливается в размере ключевой ставки БР за вычетом 3%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section03">
+                                    <div class="tile-title js-btn-toggle">Обеспечение займа</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <ul class="list-marker">
+                                            <li>
+                                                <p>Залог оборудования</p>
+                                            </li>
+                                            <li>
+                                                <p>Залог недвижимости</p>
+                                            </li>
+                                            <li>
+                                                <p>Банковская гарантия</p>
+                                            </li>
+                                            <li>
+                                                <p>Поручительство/гарантия специализированной гарантийной организации</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section04">
+                                    <div class="tile-title js-btn-toggle">Основные виды обеспечения</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <p><b>В качестве обеспечения Заемщик может воспользоваться 1-ым, 2-ым и 3-им видом обеспечения</b></p>
+                                        <div class="tbl-attention-wrap">
+                                            <table class="tbl-attention">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="th-title">1 ВИД</div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="elm-marker">Залог объектов основных средств производственного назначения (станки и оборудование) в&nbsp;размере не более 30% от суммы займа (дисконт от рыночной стоимости не менее 50%)</div>
+                                                            <div class="th-title">И/ИЛИ</div>
+                                                            <div class="elm-marker">Залог недвижимости в&nbsp;размере не более 30% от суммы займа (дисконт от рыночной стоимости не менее 30%)</div>
+                                                            <div class="th-title">И/ИЛИ</div>
+                                                            <div class="elm-marker">Банковская гарантия в&nbsp;размере не более 70% от суммы займа</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="th-title">2 ВИД</div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="elm-marker">Залог недвижимости на&nbsp;всю сумму займа (дисконт от рыночной стоимости не менее 30%)</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="th-title">3 ВИД</div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="elm-marker">Банковская гарантия в&nbsp;размере не менее 30% от суммы займа</div>
+                                                            <div class="th-title">И/ИЛИ</div>
+                                                            <div class="elm-marker">Поручительство/гарантия в&nbsp;размере не более 70% от суммы займа</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="text-decor">
+                                            <p><b>В совокупности каждый вид обеспечения должен составлять 100% от размера займа</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section05">
+                                    <div class="tile-title js-btn-toggle">Цели займа</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <ul class="list-marker">
+                                            <li>
+                                                <p>Приобретение нового оборудования, его монтаж, наладка и иные мероприятия по его подготовке для производства промышленной продукции в рамках договора поставки оборудования (за исключением общехозяйственных расходов и расходов на оплату труда) (до 100% от суммы займа)</p>
+                                            </li>
+                                            <li>
+                                                <p>Расходы на опытно-конструкторские работы (ОКР) и технологические работы, включая разработку нового продукта, технологии и технологические работы; патентные исследования и патентование разработанных решений; сертификацию, стандартизацию, контрольно-сертификационные процедуры; приобретение расходных материалов для мероприятий по разработке нового продукта, технологии, за исключением расходов на оплату труда (до 30% от суммы займа)</p>
+                                            </li>
+                                            <li>
+                                                <p>Приобретение прав на результаты интеллектуальной деятельности (РИД), за исключением прав на программное обеспечение для промышленных нужд (до 10% от суммы займа)</p>
+                                            </li>
+                                            <li>
+                                                <p>Закупка сырья, материалов и комплектующих, используемых Заемщиком при производстве продукции (до 50% от суммы займа)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section06">
+                                    <div class="tile-title js-btn-toggle">Требования к заемщикам</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <div class="tbl-main-wrap">
+                                            <table class="tbl-main">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Критерий</th>
+                                                        <th>Значение</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Критерий</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Значение</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Организационно-правовая форма</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>ООО, АО</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-att">
+                                                        <th>
+                                                            <p>ОКВЭД</p>
+                                                        </th>
+                                                        <td>
+                                                            <p><b>с 10–32; 62.01; 72</b></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Объем совокупной выручки</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>(за истекшие 4 квартала)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Не менее 50% по ОКВЭД, указанному в требованиях</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Регистрация</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>г. Москва</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Стоимость активов</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Не менее 30&nbsp;000&nbsp;000 рублей</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Объем выручки</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>(за истекшие 4 квартала)</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Не менее 50&nbsp;000&nbsp;000 рублей</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Численность работников</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Не менее 10</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Доля собственного капитала к стоимости активов, не менее*</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>25%</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Чистые активы на последнюю квартальную отчетную дату</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Величина чистых активов не ниже уставного капитала</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Доля налога на прибыль, уплаченного в бюджет города</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Не менее 25 % от уплаченной части налога, подлежащей уплате в бюджет города Москвы (за последний отчетный квартал)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Период ведения деятельности юридического лица</p>
+                                                        </th>
+                                                        <td>
+                                                            <ul>
+                                                                <li>не менее 24 месяцев;</li>
+                                                                <li>не менее 15 месяцев (после реорганизации юр. лица, действовавшего не менее 24 месяцев до реорганизации</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Текущее состояние юридического лица</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Не находится в процедуре банкротства, ликвидации или реорганизации</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Отсутствие недоимок </p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Отсутствуют недоимки по налогам, сборам, задолженности по иным обязательным платежам в бюджеты бюджетной системы РФ, размер которых превышает 50 000 рублей за последний отчетный период</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Исполнение платежей по заработной плате </p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Задолженность перед работниками по з/п не должна превышать 50 000 рублей на дату подачи заявки</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Кредитная история</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Отсутствие отрицательной кредитной истории за последние 12 месяцев </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Наличие арбитражных дел</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Отсутствие судебных споров, по которым совокупный размер требований к Заемщику превышает 5% стоимости активов Заемщика на последнюю квартальную отчетную дату </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Финансовое положение заемщика<span class="elm-req">*</span></p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Устойчивое финансовой состояние, наличие чистой прибыли суммарно за последние 4 квартала</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Доля просроченной дебиторской/ кредиторской задолженности на последнюю квартальную дату</p>
+                                                        </th>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Доля просроченной дебиторской задолженности от активов не более 5%</li>
+                                                                <li>Доля просроченной кредиторской задолженности от активов не более 5%</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Требование к руководителю, основным участникам/ акционерам/ бенефициарам</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>Наличие положительной деловой репутации руководителя, основных участников, акционеров, бенефициаров Заемщика, отсутствие отрицательной кредитной истории и значительных исков к участникам, акционерам, бенефициарам и иным Аффилированным лицам Заемщика</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p>Рейтинг, присваиваемый МФППиП Заемщику</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>не менее «В-»</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="text-small">
+                                            <p><span class="elm-req">*</span> При предоставлении в качестве обеспечения на 100% банковской гарантии критерий не применяется </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section07">
+                                    <div class="tile-title js-btn-toggle">Получение и обслуживание займа</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <div class="tbl-attention-wrap">
+                                            <table class="tbl-attention">
+                                                <tbody>
+                                                    <tr>
+                                                        <th><b>Форма предоставления займа</b></th>
+                                                        <td>
+                                                            <div class="elm-marker">Безналичное перечисление на расчетный счет заемщика всей суммы займа</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><b>Порядок погашения займа</b></th>
+                                                        <td>
+                                                            <div class="elm-marker">Погашение основной суммы займа осуществляется равными долями. Погашение процентов по всем продуктам Фонда – ежемесячно.</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-info js-popup-wrap no-close js-section-scroll" id="section08">
+                                    <div class="tile-title js-btn-toggle">Целевые показатели</div>
+                                    <div class="tile-content-block js-popup-block">
+                                        <p><b>Инвестиции в экономику города Москвы (за исключением суммы займа), определяемые по формуле:</b></p>
+                                        <div class="elm-attention">KPIп = (ОС+0,1*ИЦ)*Кдеф, где:</div>
+                                        <ul class="list-marker">
+                                            <li>
+                                                <p><b>KPIп</b> – требуемая сумма инвестиций в экономику города Москвы на цели развития промышленного производства за период действия договора займа;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>ОС</b> – средства займа, направляемые на закупку сырья, материалов и комплектующих, используемых при производстве продукции;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>ИЦ</b> – средства займа, направляемые на цели займа, за исключением средств займа, направленных на закупку сырья, материалов и комплектующих, используемых при производстве продукции;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Кдеф</b>–коэффициент-дефлятор, определяемый в зависимости от срока займа:</p>
+                                                <p>– для займов сроком до 2 лет = 1;</p>
+                                                <p>– для займов сроком от 2 до 3 лет = 1,5;</p>
+                                                <p>– для займов сроком от 3 до 4 лет = 2;</p>
+                                                <p>– для займов сроком от 4 до 5 лет = 2,5</p>
+                                            </li>
+                                        </ul>
+                                        <p>Для контроля исполнения инвестиций в экономику города Москвы используется информация, отражаемая в форме отчетности П-2 за вычетом суммы займа.</p>
+                                        <p>В качестве инвестиций в экономику города Москвы не могут засчитываться средства займа, полученные Заемщиком от Фонда в рамках реализации Проекта.</p>
+                                        <div class="text-decor">
+                                            <p><b>Срок выполнения целевых показателей определяется в Договоре займа</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                        </div>
+                    </div>
+                    <!--/info-box-->
+
+                </div>
+                <!--/content-wrap-->
+
+                <!--side-wrap-->
+                <div class="side-wrap">
+                    <div class="side-inner-wrap js-fixed-box">
+                        <!--side-menu-box-->
+                        <div class="side-menu-box js-section-menu">
+                            <ul>
+                                <li><a href="#section01">Заявка</a></li>
+                                <li><a href="#section02">Условия кредитования</a></li>
+                                <li><a href="#section03">Обеспечение займа</a></li>
+                                <li><a href="#section04">Основные виды обеспечения</a></li>
+                                <li><a href="#section05">Цель займа</a></li>
+                                <li><a href="#section06">Требование к заемщикам</a></li>
+                                <li><a href="#section07">Обслуживание займа</a></li>
+                                <li><a href="#section08">Целевые показатели</a></li>
+                            </ul>
+                        </div>
+                        <!--/side-menu-box-->
+
+                        <!--side-action-box-->
+                        <div class="side-action-box">
+                            <a href="" class="btn">
+                                <span class="button-title">Получить займ</span>
+                                <span class="button-ico">
+                                    <img src="./img/icons/arrow-button.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <!--/side-action-box-->
+                    </div>
+
+                </div>
+                <!--/side-wrap-->
+
+                <div id="side-end"></div>
+
+            </div>
+            <!--/content-outer-wrap-->
+
+            <!--reg-box-->
+            <div class="reg-box">
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap">
+                        <div class="item-tile-reg">
+                            <div class="tile-photo-wrap">
+                                <div class="tile-photo">
+                                    <img src="./img/logo-main.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title"><a href="">Регистрируйтесь</a> на нашем портале, заполните формы, и получите займ</div>
+                                <div class="tile-action">
+                                    <a href="" class="btn">
+                                        <span class="button-title">Получить займ</span>
+                                        <span class="button-ico">
+                                            <img src="./img/icons/arrow-button.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+            <!--/reg-box-->
+
         </div>
         <!-- /page -->
 
@@ -198,6 +769,7 @@
     <!-- /wrap -->
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.maskedinput.min.js"></script>
